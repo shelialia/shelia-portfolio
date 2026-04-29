@@ -46,8 +46,9 @@ export const experiences: Experience[] = [
     dateRange: "May – Dec 2025",
     bullets: [
       "Extended customer onboarding system with new compliance flows using Java and Spring Boot.",
-      "Built a compliance SME chatbot with a RAG pipeline; cut solution-discovery time by 30%.",
-      "Set up MCP server and a configurable Slack bot adopted by multiple internal teams.",
+      "Built a compliance SME chatbot with a RAG pipeline that autonomously selects tools based on query context, cutting engineers' solution-discovery time by 30%.",
+      "Cleaned and structured data from Confluence, Slack, and GitHub Catalog into BigQuery as the knowledge base; developed a combined MCP server aggregating tools across multiple servers to enable end-to-end query resolution.",
+      "Deployed a configurable Slack bot from internal QA testing to the live PayPal workspace, now used across teams.",
     ],
     color: "#a8d8c8",
     initials: "P",
