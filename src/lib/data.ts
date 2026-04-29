@@ -53,17 +53,19 @@ export const experiences: Experience[] = [
     color: "#a8d8c8",
     initials: "P",
   },
-  {
-    company: "Jane Street Capital",
-    role: "INSIGHT Program — SWE Track",
-    dateRange: "Jan 2025",
-    bullets: [
-      "1 of 20 students selected across Asia for Jane Street's INSIGHT program.",
-      "Placed 1st in the OCaml Bee, a functional programming competition among participants.",
-    ],
-    color: "#fde8c2",
-    initials: "JS",
-  },
+];
+
+export type Program = {
+  name: string;
+  year: number;
+  track?: string;
+};
+
+export const programs: Program[] = [
+  { name: "Jane Street INSIGHT Program", year: 2026, track: "SWE Track" },
+  { name: "JPMorgan Winning Women Program", year: 2025 },
+  { name: "Discover Citadel", year: 2025 },
+  { name: "WiseWomenCode", year: 2025 },
 ];
 
 export const projects: Project[] = [
