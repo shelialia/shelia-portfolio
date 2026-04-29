@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Download } from "lucide-react";
+import { Mail, Download, Check } from "lucide-react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { socialLinks } from "@/lib/data";
@@ -23,6 +24,14 @@ function LinkedInIcon({ className }: { className?: string }) {
 }
 
 export function Footer() {
+  const [copied, setCopied] = useState(false);
+
+  function copyEmail() {
+    navigator.clipboard.writeText(socialLinks.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }
+
   const linkClass =
     "flex items-center gap-2 px-5 py-2.5 rounded-full border border-border/60 text-muted-foreground hover:text-foreground hover:border-primary/40 hover:bg-primary/5 transition-all text-sm font-medium";
 
@@ -47,21 +56,21 @@ export function Footer() {
               Let&apos;s build something{" "}
               <span className="italic text-primary">together.</span>
             </h2>
-            <p className="text-muted-foreground max-w-md">
+            <p className="text-muted-foreground max-w-md mx-auto">
               I&apos;m always open to new opportunities and interesting
               conversations. My inbox is open.
             </p>
           </div>
 
           <div className="flex items-center gap-4 flex-wrap justify-center">
-            <a
-              href={`mailto:${socialLinks.email}`}
-              aria-label="Send email"
-              className={linkClass}
+            <button
+              onClick={copyEmail}
+              aria-label="Copy email address"
+              className={cn(linkClass, "cursor-pointer", copied && "border-accent text-foreground")}
             >
-              <Mail className="h-4 w-4" />
-              <span className="hidden sm:inline">Email</span>
-            </a>
+              {copied ? <Check className="h-4 w-4 text-accent" /> : <Mail className="h-4 w-4" />}
+              <span className="hidden sm:inline">{copied ? "Copied!" : "Email"}</span>
+            </button>
             <a
               href={socialLinks.linkedin}
               target="_blank"

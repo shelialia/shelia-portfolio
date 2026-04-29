@@ -6,8 +6,9 @@ import Image from "next/image";
 
 const chips = [
   { label: "🇸🇬 Singapore" },
-  { label: "NUS '27" },
+  { label: "NUS '26" },
   { label: "Hackathon Enthusiast" },
+  { label: "✈️ Loves Travelling" },
   { label: "Open Source Curious" },
 ];
 
@@ -15,30 +16,40 @@ export function About() {
   return (
     <section id="about" className="py-28 px-6">
       <div className="max-w-[1100px] mx-auto">
+        {/* Label + heading sit above the grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
+          className="mb-10"
+        >
+          <p className="font-mono text-sm text-primary tracking-widest uppercase mb-4">
+            About me
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground leading-tight">
+            Building at the intersection of{" "}
+            <span className="italic text-primary">craft & code</span>
+          </h2>
+        </motion.div>
+
+        {/* Grid: paragraph text left, image right — both start at the same level */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           className="grid md:grid-cols-2 gap-16 items-start"
         >
           {/* Text */}
           <div>
-            <p className="font-mono text-sm text-primary tracking-widest uppercase mb-4">
-              About me
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-6 leading-tight">
-              Building at the intersection of{" "}
-              <span className="italic text-primary">craft & code</span>
-            </h2>
-
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 I&apos;m a Year 3 Computer Science student at the National University
-                of Singapore, graduating May 2027. I love building products that
-                people actually use, and I&apos;ve been fascinated by the power of AI
-                tools to reshape the way we build — automating workflows and
-                accelerating what&apos;s possible, even for developers.
+                of Singapore, graduating December 2026. I love building products
+                that people actually use, and I&apos;ve been fascinated by the power
+                of AI tools to reshape the way we build — automating workflows
+                and accelerating what&apos;s possible, even for developers.
               </p>
               <p>
                 I&apos;m currently interning at{" "}
@@ -51,9 +62,9 @@ export function About() {
                 <span className="text-foreground font-medium">
                   NUS SoC TIPs Program 2026
                 </span>{" "}
-                — and somewhere in between, I&apos;m working on building my own
-                startup, a tool that would benefit the lives of many people,
-                including myself.
+                — and somewhere in between, I aspire to build my own startup, a
+                tool that would benefit the lives of many people, including
+                myself.
               </p>
               <p>
                 Looking forward, I am open to full-time developer opportunities
@@ -79,22 +90,25 @@ export function About() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-            className="flex justify-center md:justify-end"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col items-center md:items-end gap-3"
           >
             <div className="relative w-64 md:w-72" style={{ aspectRatio: "3/4" }}>
-              {/* Decorative background shape */}
               <div className="absolute inset-0 rounded-2xl bg-primary/10 translate-x-3 translate-y-3" />
-              <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border/40 shadow-lg bg-muted/30">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border/40 shadow-lg">
                 <Image
                   src="/shelia_photo.JPG"
-                  alt="Shelia Teo — portrait"
+                  alt="Shelia Teo at Niagara Falls"
                   fill
-                  className="object-contain"
+                  className="object-cover"
+                  style={{ objectPosition: "50% 40%" }}
                   priority
                 />
               </div>
             </div>
+            <p className="text-xs text-muted-foreground font-mono tracking-wide">
+              📍 Niagara Falls
+            </p>
           </motion.div>
         </motion.div>
       </div>
