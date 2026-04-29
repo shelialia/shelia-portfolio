@@ -98,7 +98,7 @@ export function Footer() {
 
           <div className="pt-6 border-t border-border/40 w-full">
             <p className="text-sm text-muted-foreground">
-              © 2025 Shelia Teo · Built with Next.js & ☕
+              © 2026 Shelia Teo · Built with Next.js & ☕
             </p>
           </div>
         </motion.div>

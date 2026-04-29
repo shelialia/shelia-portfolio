@@ -22,6 +22,7 @@ export type Hackathon = {
   project: string;
   achievement: string;
   description: string;
+  githubUrl?: string;
 };
 
 export type SkillGroup = {
@@ -33,11 +34,9 @@ export type SkillGroup = {
 export const experiences: Experience[] = [
   {
     company: "Stripe",
-    role: "Incoming SWE Intern",
+    role: "Incoming SWE Intern, Cards",
     dateRange: "May 2026",
-    bullets: [
-      "Incoming software engineering intern at one of the world's leading fintech companies.",
-    ],
+    bullets: [],
     color: "#b5a4f5",
     initials: "S",
   },
@@ -58,7 +57,7 @@ export const experiences: Experience[] = [
     role: "INSIGHT Program — SWE Track",
     dateRange: "Jan 2025",
     bullets: [
-      "1 of 20 students selected across Asia for Jane Street's competitive INSIGHT program.",
+      "1 of 20 students selected across Asia for Jane Street's INSIGHT program.",
       "Placed 1st in the OCaml Bee, a functional programming competition among participants.",
     ],
     color: "#fde8c2",
@@ -72,8 +71,29 @@ export const projects: Project[] = [
     description:
       "AI-driven user feedback analysis tool with a real-time dashboard. Integrates GPT-4o with CO-STAR prompt engineering to surface actionable product insights at scale.",
     tags: ["React", "Next.js", "FastAPI", "OpenAI", "Firebase", "TypeScript"],
-    githubUrl: "https://github.com/shelialia",
+    githubUrl: "https://github.com/shelialia/Synthesize",
     featured: true,
+  },
+  {
+    name: "GuestNote",
+    description:
+      "Desktop address book application for managing guest and contact information, built as part of a collaborative software engineering project.",
+    tags: ["Java", "JavaFX", "OOP"],
+    githubUrl: "https://github.com/AY2425S2-CS2103T-W09-2/tp",
+  },
+  {
+    name: "React Weather App",
+    description:
+      "A clean React-based weather application that fetches and displays real-time weather data by location.",
+    tags: ["React", "JavaScript", "REST API"],
+    githubUrl: "https://github.com/shelialia/react-weather-app",
+  },
+  {
+    name: "To-Do List App",
+    description:
+      "A minimalist to-do list web app for managing daily tasks, with a focus on clean UX and simplicity.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/shelialia/toDoList_webpage/deployments",
   },
 ];
 
@@ -91,6 +111,7 @@ export const hackathons: Hackathon[] = [
     project: "PackBack",
     achievement: "Participant",
     description: "Mobile app for packaging waste redistribution and circular economy.",
+    githubUrl: "https://github.com/shelialia/PackBack",
   },
   {
     event: "Morgan Stanley Code To Give",
@@ -98,6 +119,7 @@ export const hackathons: Hackathon[] = [
     project: "DonorConnect",
     achievement: "Participant",
     description: "FastAPI + Gemini LLM backend for intelligent donor tracking and engagement.",
+    githubUrl: "https://github.com/shelialia/reach_donor_connect_platform",
   },
 ];
 
@@ -130,7 +152,7 @@ export const skillGroups: SkillGroup[] = [
 ];
 
 export const socialLinks = {
-  email: "sheliateo842@gmail.com",
-  linkedin: "https://linkedin.com/in/shelia-teo",
+  email: "teo.zihui.shelia@gmail.com",
+  linkedin: "https://www.linkedin.com/in/shelia-teo-411751173",
   github: "https://github.com/shelialia",
 };

@@ -20,7 +20,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid md:grid-cols-2 gap-16 items-center"
+          className="grid md:grid-cols-2 gap-16 items-start"
         >
           {/* Text */}
           <div>
@@ -36,24 +36,28 @@ export function About() {
               <p>
                 I&apos;m a Year 3 Computer Science student at the National University
                 of Singapore, graduating May 2027. I love building products that
-                people actually use — from AI-powered tools to full-stack
-                compliance systems.
+                people actually use, and I&apos;ve been fascinated by the power of AI
+                tools to reshape the way we build — automating workflows and
+                accelerating what&apos;s possible, even for developers.
               </p>
               <p>
-                I&apos;ve interned at{" "}
-                <span className="text-foreground font-medium">PayPal</span>{" "}
-                (Global Compliance), attended{" "}
-                <span className="text-foreground font-medium">
-                  Jane Street&apos;s INSIGHT
-                </span>{" "}
-                program as 1 of 20 students selected across Asia, and am joining{" "}
+                I&apos;m currently interning at{" "}
                 <span className="text-foreground font-medium">Stripe</span> as
-                an incoming SWE intern in May 2026.
+                a Software Engineer under the Cards team. Previously, I interned
+                at{" "}
+                <span className="text-foreground font-medium">PayPal</span>{" "}
+                under the Global Compliance team. Outside of work and school, I
+                compete in hackathons and am currently helping organize the{" "}
+                <span className="text-foreground font-medium">
+                  NUS SoC TIPs Program 2026
+                </span>{" "}
+                — and somewhere in between, I&apos;m working on building my own
+                startup, a tool that would benefit the lives of many people,
+                including myself.
               </p>
               <p>
-                Outside of work, I&apos;m an active member of NUS Fintech Society
-                and the Developer Student Club. I also compete in hackathons and
-                love finding creative ways to ship things fast and well.
+                Looking forward, I am open to full-time developer opportunities
+                in Singapore or the United States upon graduation.
               </p>
             </div>
 
@@ -78,15 +82,15 @@ export function About() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="flex justify-center md:justify-end"
           >
-            <div className="relative w-72 h-72 md:w-80 md:h-80">
+            <div className="relative w-64 md:w-72" style={{ aspectRatio: "3/4" }}>
               {/* Decorative background shape */}
               <div className="absolute inset-0 rounded-2xl bg-primary/10 translate-x-3 translate-y-3" />
-              <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border/40 shadow-lg">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border/40 shadow-lg bg-muted/30">
                 <Image
                   src="/shelia_photo.JPG"
                   alt="Shelia Teo — portrait"
                   fill
-                  className="object-cover object-top"
+                  className="object-contain"
                   priority
                 />
               </div>
